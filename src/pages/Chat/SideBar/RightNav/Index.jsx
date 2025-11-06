@@ -31,8 +31,8 @@ import { useState } from "react";
 import classes from "./Index.module.css";
 
 const allChats = [
-  { name: "Mark Will", msg: "hi", time: "02:40 PM", unread: 12, img: "src/pages/Chat/SideBar/Images/r1.jpg", typing: true },
-  { name: "Sarik Jain", msg: "hello.", time: "06:12 AM", img: "src/pages/Chat/SideBar/Images/r2.jpg", seen: true },
+  { name: "Mark Will", msg: "hiii", time: "02:47 PM", unread: 12, img: "src/pages/Chat/SideBar/Images/r1.jpg", typing: true },
+  { name: "Sarik ", msg: "hello.", time: "06:12 AM", img: "src/pages/Chat/SideBar/Images/r2.jpg", seen: true },
   { name: "Clyde Smith", msg: "Haha", time: "03:15 AM", unread: 55, img: "src/pages/Chat/SideBar/Images/r3.jpg" },
   { name: "Amfr_boys_Group", msg: "tyryw", time: "Yesterday", unread: 5, img: "src/pages/Chat/SideBar/Images/r4.jpg", group: true },
   { name: "Carla Jenkins", msg: "gddfd", time: "Sunday", img: "src/pages/Chat/SideBar/Images/r1.jpg", seen: true },
@@ -365,7 +365,7 @@ export function RightNav({ active }) {
 
   const cardStyle = {
     borderRadius: 12,
-    border: "1px solid var(--mantine-color-gray-3)",
+    border: "1px solid var(--mantine-color-border)",
     cursor: "pointer",
     transition: "all 0.3s ease",
     boxShadow: "0 1px 3px rgba(0,0,0,0.05)",
@@ -407,8 +407,8 @@ export function RightNav({ active }) {
                       width: 12,
                       height: 12,
                       borderRadius: "50%",
-                      backgroundColor: "#2ecc71",
-                      border: "2px solid white",
+                      backgroundColor: "#37975fff",
+                      border: "1px solid var(--mantine-color-white)",
                     }}
                   />
                   <Text ta="center" size="xs" fw={500} mt={4} color="grey">
@@ -492,7 +492,7 @@ export function RightNav({ active }) {
                               width: 12,
                               height: 12,
                               borderRadius: "50%",
-                              border: "2px solid white",
+                              border: "2px solid var(--mantine-color-text)",
                               backgroundColor: contact.online ? "#2ecc71" : "#e74c3c",
                             }}
                           />
@@ -559,7 +559,7 @@ export function RightNav({ active }) {
                 style={{
                   borderRadius: 10,
                   backgroundColor: "var(--mantine-color-body)",
-                  border: "1px solid red",
+                  border: "1px solid var(--mantine-color-border)",
                   padding: "12px 16px",
                   boxSizing: "border-box",
                 }}
@@ -604,7 +604,7 @@ export function RightNav({ active }) {
                     style={{
                       borderRadius: 10,
                       backgroundColor: "var(--mantine-color-body)",
-                      border: "1px solid #e0e0e0",
+                      border: "1px solid var(--mantine-color-border)",
                       padding: "12px 16px",
                       transition: "0.2s",
                       boxSizing: "border-box",
@@ -650,7 +650,7 @@ export function RightNav({ active }) {
                     style={{
                       borderRadius: 10,
                       backgroundColor: "var(--mantine-color-body)",
-                      border: "1px solid #e0e0e0",
+                      border: "1px solid var(--mantine-color-border)",
                       padding: "12px 16px",
                       boxSizing: "border-box",
                     }}
@@ -699,7 +699,7 @@ export function RightNav({ active }) {
                   style={{
                     borderRadius: 10,
                     backgroundColor: "var(--mantine-color-body)",
-                    border: "1px solid #e0e0e0",
+                    border: "1px solid var(--mantine-color-border)",
                     padding: "12px 16px",
                     boxSizing: "border-box",
                     transition: "0.2s",
