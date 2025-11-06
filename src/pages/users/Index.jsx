@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import AppLayout from '../../components/AppLayout/Index'
 import UserEditModal from '../users/components/UserEditModal/Index';
 import UserAddModal from '../users/components/UserAddModal/Index';
-import profile from './profile.jpg'
+import profile from './profile.jpg a'
 
 
 const Users = () => {
