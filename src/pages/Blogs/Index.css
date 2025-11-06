@@ -1,0 +1,29 @@
+.custom-card {
+  position: relative;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-image: url("Images/bg_wal.jpg"); 
+  background-size: cover;
+  background-position: center;
+
+  
+}
+.custom-card::before {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(32, 40, 49, 0.72);
+  
+}
+.overlay{
+    background: transparent;
+    border: none;
+}
+.custom-card img{
+  width: 50px;
+
+}

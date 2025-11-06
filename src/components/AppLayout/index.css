@@ -1,0 +1,28 @@
+            
+.nav-link:hover {
+background-color: rgba(179, 137, 142, 0.05);
+}
+.dropdown-item{
+  background-color:  rgba(190, 70, 86, 0.05);
+  
+}
+
+.header {
+  
+  border-bottom: 1px solid 
+    light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+  background-color: var(--mantine-color-body);
+  
+  padding: 10px;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* prevent full page scroll */
+  font-family: sans-serif;
+  background-color: var(--mantine-color-body);
+  color: var(--mantine-color-text);
+}
+
+
