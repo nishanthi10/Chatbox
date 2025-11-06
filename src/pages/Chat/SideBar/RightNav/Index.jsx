@@ -31,8 +31,8 @@ import { useState } from "react";
 import classes from "./Index.module.css";
 
 const allChats = [
-  { name: "Mark Williams", msg: "hi", time: "02:40 PM", unread: 12, img: "src/pages/Chat/SideBar/Images/r1.jpg", typing: true },
-  { name: "Sarika Jain", msg: "hello.", time: "06:12 AM", img: "src/pages/Chat/SideBar/Images/r2.jpg", seen: true },
+  { name: "Mark Will", msg: "hi", time: "02:40 PM", unread: 12, img: "src/pages/Chat/SideBar/Images/r1.jpg", typing: true },
+  { name: "Sarik Jain", msg: "hello.", time: "06:12 AM", img: "src/pages/Chat/SideBar/Images/r2.jpg", seen: true },
   { name: "Clyde Smith", msg: "Haha", time: "03:15 AM", unread: 55, img: "src/pages/Chat/SideBar/Images/r3.jpg" },
   { name: "Amfr_boys_Group", msg: "tyryw", time: "Yesterday", unread: 5, img: "src/pages/Chat/SideBar/Images/r4.jpg", group: true },
   { name: "Carla Jenkins", msg: "gddfd", time: "Sunday", img: "src/pages/Chat/SideBar/Images/r1.jpg", seen: true },
@@ -292,7 +292,7 @@ const allCalls = [
   {
     name: "Wilbur Martinez",
     type: "voice",
-    time: "20 min ago",
+    time: "20 min ago" ,
     duration: "08 m 12 s",
     img: "src/pages/Chat/SideBar/Images/r8.jpg",
   },
@@ -559,7 +559,7 @@ export function RightNav({ active }) {
                 style={{
                   borderRadius: 10,
                   backgroundColor: "var(--mantine-color-body)",
-                  border: "1px solid #e0e0e0",
+                  border: "1px solid red",
                   padding: "12px 16px",
                   boxSizing: "border-box",
                 }}
