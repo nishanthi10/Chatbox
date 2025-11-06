@@ -6,7 +6,7 @@
 }
 
 .header {
-  display: flex;
+  display: flex ;
   justify-content: space-between;
   align-items: center;
 }
@@ -20,8 +20,4 @@
   font-family: Outfit, var(--mantine-font-family);
   font-weight: 700;
 }
-.contact:hover {
-  border: 1px solid red;
-  cursor: pointer;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
-}
+
