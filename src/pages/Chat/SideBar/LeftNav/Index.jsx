@@ -114,7 +114,7 @@ export function LeftNav({ active, setActive }) {
                 stroke={1.5}
                 style={{ marginRight: 8 }}
               />
-              Logout
+              Login
             </Menu.Item>
           </Menu.Dropdown>
         </Menu>
