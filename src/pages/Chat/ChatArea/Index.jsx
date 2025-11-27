@@ -8,8 +8,8 @@ export function ChatArea({ messages }) {
         flex: 1,
         overflowY: "auto",
         padding: "16px",
-        marginBottom: "60px",
         backgroundColor: "var(--mantine-color-body)",
+        height: "80vh",
       }}
     >
       {messages.length === 0 ? (
@@ -30,7 +30,6 @@ export function ChatArea({ messages }) {
               marginLeft: "auto",
               marginRight: "10px",
               wordBreak: "break-word",
-              overflowWrap: "break-word",
               whiteSpace: "pre-wrap",
             }}
           >

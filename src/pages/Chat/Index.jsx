@@ -3,12 +3,18 @@ import AppLayout from "../../components/AppLayout/Index";
 import { SideBar } from "./SideBar/Index";
 import { Header } from "./Header/Index";
 import { Footer } from "./Footer/Index";
-import { ChatArea } from "./ChatArea/Index"; 
+import { ChatArea } from "./ChatArea/Index";
+import { StatusCarousel } from "./StatusCarousel/Index";
 import { Grid } from "@mantine/core";
 
 export function Chat() {
-  const [messages, setMessages] = useState([]);
 
+  const [messages, setMessages] = useState([]); // store chat messages
+  const [selectedUser, setSelectedUser] = useState(null);  // store which user was clicked (for showing in header)
+  const [activeSection, setActiveSection] = useState("Chats"); //  store which section is active (Chats, Contacts, Groups, Status, Calls)
+  const [selectedStatusUser, setSelectedStatusUser] = useState(null);
+
+  // send new message
   const handleSendMessage = (newMessage) => {
     if (newMessage.trim() === "") return;
     setMessages((prev) => [...prev, newMessage]);
@@ -16,50 +22,72 @@ export function Chat() {
 
   return (
     <AppLayout>
-      <Grid
-        gutter={0}
+      <div
         style={{
+          display: "flex",
+          width: "100%",
           height: "100vh",
+          overflow: "hidden",
           backgroundColor: "var(--mantine-color-body)",
         }}
       >
-        {/* Sidebar */}
-        <Grid.Col
-          span={{ base: 12, sm: 4, md: 3 }}
+        {/* Sidebar (fixed width) */}
+        <div
           style={{
-            backgroundColor: "var(--mantine-color-body)",
-            borderRight: "var(--mantine-color-body)",
+            width: "430px",
+            minWidth: "430px",
+            borderRight: "1px solid var(--mantine-color-border)",
             overflowY: "auto",
-            display: "flex",
-            justifyContent: "center",
-            transition: "all 0.3s ease",
           }}
         >
-          <SideBar />
-        </Grid.Col>
+          <SideBar
+            onUserSelect={(user) => setSelectedUser(user)}
+            onActiveChange={(section) => setActiveSection(section)}
+             onStatusSelect={(statusUser) => setSelectedStatusUser(statusUser)}
+          />
+        </div>
 
-        {/* Main Chat Section */}
-        <Grid.Col
-          span={{ base: 12, sm: 8, md: 9 }}
+        {/* Right Side */}
+        <div
           style={{
+            flex: 1,
             display: "flex",
             flexDirection: "column",
-            backgroundColor: "var(--mantine-color-body)",
-            height: "100vh",
+            height: "100%",
+            overflow: "hidden",
           }}
         >
           {/* Header */}
-          <div style={{ flexShrink: 0 }}>
-            <Header />
+          {activeSection !== "Status" && (
+            <div style={{ flexShrink: 0 }}>
+              <Header selectedUser={selectedUser} />
+            </div>
+          )}
+
+          {/* Content – Scrollable */}
+          <div
+            style={{
+
+              overflowY: "auto",
+              minHeight: 0,
+            }}
+          >
+            {activeSection === "Status" ? (
+              <StatusCarousel selectedUser={selectedStatusUser} />
+            ) : (
+              <ChatArea messages={messages} selectedUser={selectedUser} />
+            )}
           </div>
 
-          {/* Main Chat Content */}
-          <ChatArea messages={messages} />
-
           {/* Footer */}
-          <Footer onSend={handleSendMessage} />
-        </Grid.Col>
-      </Grid>
+          {activeSection !== "Status" && (
+            <div style={{ flexShrink: 0 }}>
+              <Footer onSend={handleSendMessage} />
+            </div>
+          )}
+        </div>
+      </div>
     </AppLayout>
+
   );
 }

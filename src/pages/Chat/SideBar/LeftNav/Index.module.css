@@ -1,13 +1,12 @@
 .aside {
-  flex: 0 0 80px;
+  flex: 0 0 90px;
   gap: 20px;
   background-color: var(--mantine-color-body);
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-right: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-7));
-  border-left: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-7));
-  
+  border-left: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+   border-right: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
 }
 
 .mainLink {

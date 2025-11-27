@@ -36,11 +36,31 @@ const UserAddModal = ({setData}) => {
               
               </div>{errors.company &&<p style={{color:"red"}}>{errors.company.message}</p>}
               <div>
-                <select className="form-select"  aria-label="Default select example"
+                <select className="form-select mb-3"  aria-label="Default select example"
                  {...register("role", { required: " select a role" })}>
                   <option value="">Role</option>
                   <option value="ui designer">ui deginer</option>
                   <option value="ux designer">ux designer</option>
+                 
+                </select>
+                 {errors.role && <p style={{color:"red"}}>{errors.role.message}</p>}
+                </div>
+              <div>
+                <select className="form-select mb-3"  aria-label="Default select example"
+                 {...register("verified", { required: " select a verified status" })}>
+                  <option value="">verified</option>
+                  <option value="1">yes</option>
+                  <option value="0">no</option>
+                 
+                </select>
+                 {errors.role && <p style={{color:"red"}}>{errors.role.message}</p>}
+                </div>
+              <div>
+                <select className="form-select"  aria-label="Default select example"
+                 {...register("role", { required: " select a role" })}>
+                  <option value="">status</option>
+                  <option value="1">yes</option>
+                  <option value="0">No</option>
                  
                 </select>
                  {errors.role && <p style={{color:"red"}}>{errors.role.message}</p>}

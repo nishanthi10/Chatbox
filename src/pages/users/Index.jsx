@@ -1,20 +1,26 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import AppLayout from '../../components/AppLayout/Index'
 import UserEditModal from '../users/components/UserEditModal/Index';
 import UserAddModal from '../users/components/UserAddModal/Index';
 import profile from './profile.jpg'
+import axios from 'axios';
 
 
 const Users = () => {
 
-  const [UserData, setUserData] = useState(null)
+  const [UserData, setUserData] = useState(null);
+  const [data, setData] = useState([]);
+useEffect(() => {
+  axios.get('http://localhost:5000/users')
+    .then(res => {
+       console.log("API Response:", res.data);
+      setData(res.data);
+    })
+    .catch(err => {
+      console.log("API Error:", err);
 
-  const [data, setData] = useState ([
-    { name: 'Adam ', company: 'Mohr, Langworth and Hills', role: 'ui Designer', verified: 1, status: 0 },
-    { name: 'Dr. Guadalupe ', company: 'Spencer, Raynor and Langosh', role: ' Designer', verified: 0, status: 1 },
-    { name: 'Teresa Luettgen ', company: 'Larkin LLC', role: 'ux Designer', verified: 1, status: 0 }
-  ]);
-
+    });
+}, []);  // VERY IMPORTANT
 
 
 
@@ -32,7 +38,7 @@ const Users = () => {
 
             <thead >
               <tr className="table-secondary">
-                <th scope="col "> <input className="check-input " type="checkbox"></input></th>
+                <th scope="col ">Id</th>
                 <th scope="col">Name</th>
                 <th scope="col">Company</th>
                 <th scope="col">Role</th>
@@ -44,10 +50,8 @@ const Users = () => {
             <tbody>
               {data.map((user, index) => (
                 <tr key={index}>
-                  <th scope="row"><input className="check-input" type="checkbox" /></th>
-                  <td><img src={profile} width={30}
-                    className="rounded-circle me-2"
-                    alt="img" />
+                  <th>{user.id}</th>
+                  <td>
                     {user.name}
                   </td>
                   <td>{user.company}</td>
