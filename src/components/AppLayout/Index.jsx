@@ -25,61 +25,61 @@ const AppLayout = ({ children }) => {
             <IconMenu2 size={24} />
           </div>
 
-          <ul className="nav flex-column mt-3">
+          <ul className="nav flex-column mt-4">
 
             {/* LOGO */}
             <li className="nav-item d-flex align-items-center justify-content-center mb-3">
-              <img src={logo} size="100px" alt="Logo" className="sidebar-logo"/>
+              <img src={logo}  alt="Logo" className="sidebar-logo"/>
             </li>
 
             {/* MENU ITEMS */}
-            <li className="nav-item">
+            <li className="nav-item mt-4">
               <Link className="nav-link" to="/dashboard">
-                <IconChartBarPopular />
-                {isOpen && <span className="ms-2">Dashboard</span>}
+                <IconChartBarPopular size={30}/>
+                {isOpen && <span className="ms-3">Dashboard</span>}
               </Link>
             </li>
 
             <li className="nav-item">
               <Link className="nav-link" to="/users">
-                <IconUserSquare />
-                {isOpen && <span className="ms-2">Users</span>}
+                <IconUserSquare size={30}/>
+                {isOpen && <span className="ms-3">Users</span>}
               </Link>
             </li>
 
             <li className="nav-item">
               <Link className="nav-link" to="/blogs">
-                <IconReceiptBitcoin />
-                {isOpen && <span className="ms-2">Blog</span>}
+                <IconReceiptBitcoin size={30}/>
+                {isOpen && <span className="ms-3">Blog</span>}
               </Link>
             </li>
 
             <li className="nav-item">
               <Link className="nav-link" to="/sign-in">
-                <IconLockSquareRoundedFilled />
-                {isOpen && <span className="ms-2">Sign In</span>}
+                <IconLockSquareRoundedFilled size={30}/>
+                {isOpen && <span className="ms-3">Sign In</span>}
               </Link>
             </li>
 
             <li className="nav-item">
               <Link className="nav-link" to="/tablepage">
-                <IconBrandFunimation />
-                {isOpen && <span className="ms-2">Tables</span>}
+                <IconBrandFunimation size={30}/>
+                {isOpen && <span className="ms-3">Tables</span>}
               </Link>
             </li>
 
             <li className="nav-item">
               <Link className="nav-link" to="/course">
-                <IconVocabulary />
-                {isOpen && <span className="ms-2">Course</span>}
+                <IconVocabulary size={30}/>
+                {isOpen && <span className="ms-3">Course</span>}
               </Link>
             </li>
 
             {/* DROPDOWN */}
             <li className="nav-item dropdown">
-              <Link className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                <IconSchool />
-                {isOpen && <span className="ms-2">Students</span>}
+              <Link className="nav-link dropdown-toggle " data-bs-toggle="dropdown">
+                <IconSchool size={30}/>
+                {isOpen && <span className="ms-3">Students</span>}
               </Link>
 
               <ul className="dropdown-menu">
@@ -98,29 +98,29 @@ const AppLayout = ({ children }) => {
 
             <li className="nav-item">
               <Link className="nav-link" to="/events">
-                <IconBrandFunimation />
-                {isOpen && <span className="ms-2">Events</span>}
+                <IconBrandFunimation size={30}/>
+                {isOpen && <span className="ms-3">Events</span>}
               </Link>
             </li>
 
             <li className="nav-item">
               <Link className="nav-link" to="/details">
-                <IconFileDescription />
-                {isOpen && <span className="ms-2">Details</span>}
+                <IconFileDescription size={30}/>
+                {isOpen && <span className="ms-3">Details</span>}
               </Link>
             </li>
 
             <li className="nav-item">
               <Link className="nav-link" to="/shop">
-                <IconTrolleyFilled />
-                {isOpen && <span className="ms-2">Shop</span>}
+                <IconTrolleyFilled size={30}/>
+                {isOpen && <span className="ms-3">Shop</span>}
               </Link>
             </li>
 
             <li className="nav-item">
               <Link className="nav-link" to="/chat">
-                <IconBrandWhatsapp />
-                {isOpen && <span className="ms-2">Chat</span>}
+                <IconBrandWhatsapp size={30}/>
+                {isOpen && <span className="ms-3">Chat</span>}
               </Link>
             </li>
 
