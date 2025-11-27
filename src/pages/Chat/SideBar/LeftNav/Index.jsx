@@ -101,7 +101,7 @@ export function LeftNav({ active, setActive }) {
         <Menu shadow="md" width={130} position="top-start" offset={5} radius="md">
           <Menu.Target>
             <Avatar
-              src="src/pages/Chat/SideBar/Images/profile4.jpg"
+              src="src/pages/Chat/SideBar/Images/s1.jpg"
               size={40}
               radius="xl"
               style={{ marginTop: "20px", cursor: "pointer" }}

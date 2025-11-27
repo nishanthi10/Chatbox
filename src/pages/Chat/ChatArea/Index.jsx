@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Text } from "@mantine/core";
+import { Box, Text, Avatar, Group } from "@mantine/core";
+import { IconCheck } from "@tabler/icons-react";
 
 export function ChatArea({ messages }) {
   return (
@@ -7,9 +8,9 @@ export function ChatArea({ messages }) {
       style={{
         flex: 1,
         overflowY: "auto",
-        padding: "16px",
-        backgroundColor: "var(--mantine-color-body)",
+        padding: "20px",
         height: "80vh",
+        backgroundColor: "var(--mantine-color-body)",
       }}
     >
       {messages.length === 0 ? (
@@ -18,22 +19,47 @@ export function ChatArea({ messages }) {
         </Text>
       ) : (
         messages.map((msg, i) => (
-          <Box
-            key={i}
-            style={{
-              padding: "8px 12px",
-              backgroundColor: "#6443beff",
-              color: "white",
-              borderRadius: "12px 12px 0 12px",
-              marginBottom: "10px",
-              maxWidth: "50%",
-              marginLeft: "auto",
-              marginRight: "10px",
-              wordBreak: "break-word",
-              whiteSpace: "pre-wrap",
-            }}
-          >
-            {msg}
+          <Box key={i} mb={20}>
+
+            {/* Top meta info */}
+            <Group
+              gap={6}
+              justify="flex-end"
+              style={{ marginRight: "60px" }}
+            >
+              <IconCheck size={18} color="#00e48f" />
+              <Text size="xs" c="var(--mantine-color-text)">
+                02:39 PM
+              </Text>
+              <Text size="md" fw={500} c="var(--mantine-color-text)">
+                • You
+              </Text>
+            </Group>
+
+            {/* Bubble + Avatar */}
+            <Group justify="flex-end" align="flex-end">
+              <Box
+                style={{
+                  padding: "10px 14px",
+                  backgroundColor: "#8258f5ff",
+                  color: "white",
+                  borderRadius: "10px 10px 0 10px",
+                  maxWidth: "55%",
+                  wordBreak: "break-word",
+                  whiteSpace: "pre-wrap",
+                  boxShadow: "0px 3px 8px rgba(22, 20, 20, 0.3)",
+                }}
+              >
+                {msg}
+              </Box>
+
+              <Avatar
+                src="src/pages/Chat/SideBar/Images/s1.jpg"
+                radius="xl"
+                size="md"
+                style={{ marginLeft: 10 }}
+              />
+            </Group>
           </Box>
         ))
       )}

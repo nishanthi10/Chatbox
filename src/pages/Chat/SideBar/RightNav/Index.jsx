@@ -36,14 +36,14 @@ import classes from "./Index.module.css";
 
 const allChats = [
   { name: "Mark Will", msg: "hiii", time: "02:47 PM", unread: 12, img: "src/pages/Chat/SideBar/Images/r1.jpg", typing: true },
-  { name: "Sarik ", msg: "hello.", time: "06:12 AM", img: "src/pages/Chat/SideBar/Images/r1.jpg", seen: true },
+  { name: "Sarik ", msg: "hello.", time: "06:12 AM", img: "src/pages/Chat/SideBar/Images/s1.jpg", seen: true },
   { name: "Clyde Smith", msg: "Haha", time: "03:15 AM", unread: 55, img: "src/pages/Chat/SideBar/Images/r3.jpg" },
   { name: "Amfr_boys_Group", msg: "tyryw", time: "Yesterday", unread: 5, img: "src/pages/Chat/SideBar/Images/r4.jpg", group: true },
-  { name: "Carla Jenkins", msg: "gddfd", time: "Sunday", img: "src/pages/Chat/SideBar/Images/r1.jpg", seen: true },
-  { name: "Federico Wells", msg: "Photo", time: "Wednesday", unread: 12, img: "src/pages/Chat/SideBar/Images/r2.jpg" },
-  { name: "Federico Wells", msg: "Photo", time: "Wednesday", unread: 12, img: "src/pages/Chat/SideBar/Images/r2.jpg" },
-  { name: "Federico Wells", msg: "Photo", time: "Wednesday", unread: 12, img: "src/pages/Chat/SideBar/Images/r2.jpg" },
-  { name: "Federico Wells", msg: "Photo", time: "Wednesday", unread: 12, img: "src/pages/Chat/SideBar/Images/r2.jpg" },
+  { name: "Carla Jenkins", msg: "gddfd", time: "Sunday", img: "src/pages/Chat/SideBar/Images/r2.jpg", seen: true },
+  { name: "Federico Wells", msg: "Photo", time: "Wednesday", unread: 12, img: "src/pages/Chat/SideBar/Images/r1.jpg" },
+  { name: "Federico Wells", msg: "Photo", time: "Wednesday", unread: 12, img: "src/pages/Chat/SideBar/Images/s2.jpg" },
+  { name: "Federico Wells", msg: "Photo", time: "Wednesday", unread: 12, img: "src/pages/Chat/SideBar/Images/s3.jpg" },
+  { name: "Federico Wells", msg: "Photo", time: "Wednesday", unread: 12, img: "src/pages/Chat/SideBar/Images/s4.jpg" },
   { name: "Federico Wells", msg: "Photo", time: "Wednesday", unread: 12, img: "src/pages/Chat/SideBar/Images/r2.jpg" },
   { name: "Federico Wells", msg: "Photo", time: "Wednesday", unread: 12, img: "src/pages/Chat/SideBar/Images/r2.jpg" },
   { name: "Federico Wells", msg: "Photo", time: "Wednesday", unread: 12, img: "src/pages/Chat/SideBar/Images/r2.jpg" },
@@ -107,13 +107,13 @@ const Allcontacts = [
         name: "Federico Wells",
         status: "last seen 10 min ago",
         online: true,
-        img: "src/pages/Chat/SideBar/Images/r3.jpg",
+        img: "src/pages/Chat/SideBar/Images/s3.jpg",
       },
       {
         name: "Federico Wells",
         status: "last seen 10 min ago",
         online: true,
-        img: "src/pages/Chat/SideBar/Images/r3.jpg",
+        img: "src/pages/Chat/SideBar/Images/s4.jpg",
       },
     ],
   },];
@@ -238,7 +238,7 @@ const allStatus = {
     {
       name: "Edward Lietz",
       time: "2 hrs ago",
-      img: "src/pages/Chat/SideBar/Images/profile5.jpg",
+      img: "src/pages/Chat/SideBar/Images/s2.jpg",
     },
     {
       name: "Sarika Jain",
@@ -253,7 +253,7 @@ const allStatus = {
     {
       name: "Wilbur Martinez",
       time: "Today at 04:20 AM",
-      img: "src/pages/Chat/SideBar/Images/profile7.jpg",
+      img: "src/pages/Chat/SideBar/Images/s1.jpg",
     },
   ],
 };
@@ -319,13 +319,13 @@ const allCalls = [
 
 const profileDetails = {
   name: "Rabino Desilva",
-  about: "Hey there! I’m using DreamsChat",
+  about: "Hey there!",
   phone: "+91 98765 43210",
   email: "rabino@example.com",
   gender: "Male",
   dob: "18 Oct 2000",
   address: "Bangalore, India",
-  img: "src/pages/Chat/SideBar/Images/profile.jpg",
+  img: "src/pages/Chat/SideBar/Images/s1.jpg",
 };
 
 const profileInfo = [
@@ -1252,7 +1252,7 @@ export function RightNav({ active, onUserSelect, onStatusSelect }) {
                       Language
                     </Accordion.Control>
                     <Accordion.Panel>
-                      <Select defaultValue="English" data={['Engligh', 'French',]} />
+                      <Select defaultValue="English" data={['English', 'French',]} />
                     </Accordion.Panel>
                   </Accordion.Item>
                 </Accordion>
