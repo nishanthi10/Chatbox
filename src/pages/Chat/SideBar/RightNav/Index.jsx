@@ -210,7 +210,7 @@ const allStatus = {
   myStatus: {
     name: "Rabino Desilva",
     time: "Today at 08:25 AM",
-    img: "src/pages/Chat/SideBar/Images/bg_wal.jpg",
+    img: "src/pages/Chat/SideBar/Images/s1.jpg",
   },
   recentUpdates: [
     {
@@ -329,10 +329,10 @@ const profileDetails = {
 };
 
 const profileInfo = [
-  { label: "Name", value: "Salom Katherine", icon: <IconUser size={16} /> },
-  { label: "Phone", value: "514-245-98315", icon: <IconPhone size={16} /> },
-  { label: "Gender", value: "Female", icon: <IconGenderFemale size={16} /> },
-  { label: "Email Address", value: "info@example.com", icon: <IconMail size={16} /> },
+  { label: "Name", value: "Rabino Desilva", icon: <IconUser size={16} /> },
+  { label: "Phone", value: "+91 98765 43210", icon: <IconPhone size={16} /> },
+  { label: "Gender", value: "Male", icon: <IconGenderFemale size={16} /> },
+  { label: "Email Address", value: "rabino@example.com", icon: <IconMail size={16} /> },
   { label: "Bio", value: "Web Designer", icon: <IconBriefcase size={16} /> },
   { label: "Location", value: "Portland, USA", icon: <IconMapPin size={16} /> },
   { label: "Join Date", value: "01 July 2024", icon: <IconCalendar size={16} /> },
@@ -614,13 +614,13 @@ export function RightNav({ active, onUserSelect, onStatusSelect }) {
                         <Grid.Col span={{ base: 12, xs: 6 }}>
                           <Group gap={8}>
                             {item.icon}
-                            <Text c="gray.6" size="sm">{item.label}</Text>
+                            <Text c="gray.6" size="md">{item.label}</Text>
                           </Group>
                         </Grid.Col>
 
                         {/* RIGHT COLUMN */}
                         <Grid.Col span={{ base: 12, xs: 6 }}>
-                          <Text fw={500} size="sm" c="white">
+                          <Text fw={500} size="md" c="var(--mantine-color-text)">
                             {item.value}
                           </Text>
                         </Grid.Col>
@@ -649,13 +649,13 @@ export function RightNav({ active, onUserSelect, onStatusSelect }) {
                         <Grid.Col span={{ base: 12, xs: 6 }}>
                           <Group gap={8}>
                             {item.icon}
-                            <Text c="gray.6" size="sm">{item.label}</Text>
+                            <Text c="gray.6" size="md">{item.label}</Text>
                           </Group>
                         </Grid.Col>
 
                         {/* RIGHT COLUMN */}
                         <Grid.Col span={{ base: 12, xs: 6 }}>
-                          <Text fw={500} size="sm" c="white">
+                          <Text fw={500} size="md" c="var(--var-mantine-color-text)">
                             {item.value}
                           </Text>
                         </Grid.Col>
@@ -1432,6 +1432,7 @@ export function RightNav({ active, onUserSelect, onStatusSelect }) {
   };
 
   return (
+    
     <ScrollArea style={{ height: "calc(100vh - 40px)" }} scrollbarSize={5}>
       <div className={classes.main}>
         <div className={classes.header}>

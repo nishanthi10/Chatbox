@@ -22,6 +22,16 @@ useEffect(() => {
     });
 }, []);  // VERY IMPORTANT
 
+const handleDelete = async (id) => {
+  if (!window.confirm("Are you sure you want to delete this user?")) return;
+
+  try {
+    await axios.delete(`http://localhost:5000/users/${id}`);
+    setData((prev) => prev.filter((u) => u.id !== id));
+  } catch (err) {
+    console.log("Delete API Error:", err);
+  }
+};
 
 
   return (
@@ -72,7 +82,7 @@ useEffect(() => {
                       <ul className="dropdown-menu dropdown-menu-end " aria-labelledby="dropdownMenuButton1">
                         <li><button className="dropdown-item" data-bs-toggle="modal" data-bs-target="#Modal1" 
                         onClick={()=>setUserData(user)}> <i className="bi bi-pencil px-3"></i>Edit</button></li>
-                        <li><button className="dropdown-item text-danger"> <i className="bi bi-trash3-fill px-3"></i>Delete</button></li>
+                        <li><button className="dropdown-item text-danger" onClick={()=> handleDelete(user.id)}> <i className="bi bi-trash3-fill px-3"></i>Delete</button></li>
                       </ul>
                     </div>
                   </td>
@@ -82,7 +92,7 @@ useEffect(() => {
 
           
 
-          <UserEditModal user={UserData}/>
+          <UserEditModal user={UserData} setData={setData} />
           <UserAddModal setData={setData}/>
         </div>
       </AppLayout>

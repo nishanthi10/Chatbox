@@ -15,12 +15,13 @@ app.get("/users", (req, res) => {
   });
 });
 
-// GET user by ID
-app.get("/users/:id", (req, res) => {
-  const sql = "SELECT * FROM curdtable WHERE id=?";
-  db.query(sql, [req.params.id], (err, rows) => {
+app.put("/users/:id", (req, res) => {
+  const { name, company, role, verified, status } = req.body;
+  const sql = "UPDATE curdtable SET name=?, company=?, role=?, verified=?, status=? WHERE id=?";
+
+  db.query(sql, [name, company, role, verified, status, req.params.id], (err, result) => {
     if (err) return res.status(500).json(err);
-    res.json(rows[0]);
+    res.json({ message: "User Updated" });
   });
 });
 
