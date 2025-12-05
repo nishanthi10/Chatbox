@@ -1,0 +1,38 @@
+.hoverWrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.hoverIcons {
+  position: absolute;
+  left: -60px;           
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.hoverWrapper:hover .hoverIcons {
+  opacity: 1;
+  pointer-events: auto;
+}
+.bubble:hover .hoverIcons {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.bubble {
+  padding: 10px 14px;
+  background-color: #8258f5;
+  color: white;
+  border-radius: 10px 10px 0 10px;
+  max-width: 55%;
+  word-break: break-word;
+  white-space: pre-wrap;
+  box-shadow: 0px 3px 8px rgba(22, 20, 20, 0.3);
+}

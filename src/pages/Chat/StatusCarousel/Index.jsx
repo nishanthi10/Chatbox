@@ -10,7 +10,7 @@ import {
   IconMapPinShare,
   IconUserCheck,
   IconDotsVertical,
-  IconFolder,
+  IconEye,
   
   IconMoodSmile,
 } from "@tabler/icons-react";
@@ -122,7 +122,7 @@ const statusViewed = [
                     gap: 8,
                   }}
                 >
-                  <span onClick={open} style={{ fontSize: 18, color: "black",cursor:"pointer"}}>👁</span> <span style={{ cursor:"pointer",fontSize: 18, color: "black" }} onClick={open}>25</span>
+                  <span onClick={open} style={{ fontSize: 18, color: "black",cursor:"pointer"}}><IconEye size={18} /></span> <span style={{ cursor:"pointer",fontSize: 18, color: "black" }} onClick={open}>25</span>
                 </div>
               ) : (
                 // 📝 Other user – show reply input
@@ -271,7 +271,8 @@ const statusViewed = [
 
                 <Stack gap="xs" p="md">
                   {statusViewed.map((s, index) => (
-                    <Flex key={index} align="center" justify="space-between" p="lg" style={{ border: "light-dark(var(--mantine-color-white), var(--mantine-color-dark-))", borderRadius: "10px" }}>
+                    <Flex key={index} align="center" justify="space-between" p="lg"
+                     style={{ border: "light-dark(var(--mantine-color-white), var(--mantine-color-dark-))", borderRadius: "10px" }}>
                       <Group gap="sm">
                         <Avatar src={s.img} radius="xl" size={55} />
                         <Box>

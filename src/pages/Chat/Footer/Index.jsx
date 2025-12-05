@@ -74,15 +74,15 @@ export function Footer({ onSend }) {
             backgroundColor: "var(--mantine-color-input-bg)",
             borderRadius: "10px",
             padding: "6px 10px",
-            boxShadow: "0 0 3px rgba(0,0,0,0.05)",
+            boxShadow: "0 0 3px rgba(122, 58, 58, 0.05)",
           }}
         >
-          {/* 🎤 Microphone Icon */}
+          
           <ActionIcon variant="subtle" color="gray">
             <IconMicrophone size={18} color="#888" />
           </ActionIcon>
 
-          {/* 💬 Input Box */}
+     
           <Box style={{ flex: 1, margin: "0 8px" }}>
             <TextInput
               placeholder="Type your message"
@@ -100,7 +100,7 @@ export function Footer({ onSend }) {
             />
           </Box>
 
-          {/*  Right icons */}
+      
           <Flex align="center" gap={6}>
            
             <Popover
@@ -128,7 +128,7 @@ export function Footer({ onSend }) {
                   backgroundColor: "var(--mantine-color-body)",
                 }}
               >
-                {/*  Emoji Picker Component */}
+               
                 <EmojiPicker
                   onEmojiClick={handleEmojiClick}
                   theme="dark"
@@ -138,7 +138,7 @@ export function Footer({ onSend }) {
               </Popover.Dropdown>
             </Popover>
 
-            {/* File Upload */}
+         
             <ActionIcon
               color="gray"
               variant="transparent"
@@ -149,8 +149,8 @@ export function Footer({ onSend }) {
               <input type="file" hidden onChange={handleFileSelect} />
             </ActionIcon>
 
-            {/* More Menu */}
-            <Menu shadow="md" width={130} position="top-end" radius="md">
+         
+            <Menu shadow="xl" width={160} position="top-end" radius="md" >
               <Menu.Target>
                 <ActionIcon size="lg" variant="subtle" color="gray">
                   <IconDotsVertical size={22} stroke={1.9} />
@@ -158,29 +158,29 @@ export function Footer({ onSend }) {
               </Menu.Target>
               <Menu.Dropdown style={{ padding: 10 }}>
                 <Menu.Item>
-                  <IconCamera size={18} stroke={1.5} style={{ marginRight: 8 }} />
+                  <IconCamera size={20} stroke={1.5} style={{ marginRight: 8 }} />
                   Camera
                 </Menu.Item>
                 <Menu.Item>
-                  <IconPhotoUp size={18} stroke={1.3} style={{ marginRight: 8 }} />
+                  <IconPhotoUp size={20} stroke={1.3} style={{ marginRight: 8 }} />
                   Gallery
                 </Menu.Item>
                 <Menu.Item>
-                  <IconMusic size={18} stroke={1.5} style={{ marginRight: 8 }} />
+                  <IconMusic size={20} stroke={1.5} style={{ marginRight: 8 }} />
                   Audio
                 </Menu.Item>
                 <Menu.Item>
-                  <IconMapPinShare size={18} stroke={1.5} style={{ marginRight: 8 }} />
+                  <IconMapPinShare size={20} stroke={1.5} style={{ marginRight: 8 }} />
                   Location
                 </Menu.Item>
                 <Menu.Item>
-                  <IconUserCheck size={18} stroke={1.7} style={{ marginRight: 8 }} />
+                  <IconUserCheck size={20} stroke={1.7} style={{ marginRight: 8 }} />
                   Contact
                 </Menu.Item>
               </Menu.Dropdown>
             </Menu>
 
-            {/*  Send Button */}
+            
             <ActionIcon
               radius="md"
               color="violet"
